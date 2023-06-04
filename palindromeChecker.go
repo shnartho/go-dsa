@@ -22,9 +22,3 @@ func palindromeChecker(givenString string) bool {
 
 	return true
 }
-
-// func main() {
-// 	mystring := "helehq"
-// 	print(palindromeChecker(mystring))
-
-// }

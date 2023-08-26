@@ -1,1 +1,2 @@
 hello, File handling in Go!
+Appending more content in the same file

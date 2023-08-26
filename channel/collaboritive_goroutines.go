@@ -31,14 +31,10 @@ func main() {
 	go generateNumbers(numChannel)
 	go calculateSquares(numChannel, squareChannel)
 
-	for num := range numChannel {
-		fmt.Printf("%d ", num)
-	}
-	fmt.Println()
-
+	devider := 1
 	for square := range squareChannel {
-		fmt.Printf("%d ", square)
+		fmt.Printf("Number: %d | Square: %d \n", square/devider, square)
+		devider += 1
 	}
 	fmt.Println()
-
 }

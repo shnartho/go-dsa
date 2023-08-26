@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 type Shape interface {
 	Area() float64
@@ -30,4 +33,16 @@ func (c Circle) Area() float64 {
 
 func (c Circle) Perimeter() float64 {
 	return 2 * math.Pi * c.radius
+}
+
+func main() {
+	var newShape Shape
+
+	newShape = Rectangle{width: 5, height: 4}
+	fmt.Println("Area of rectangle: ", newShape.Area())
+	fmt.Println("Perimeter of rectangle: ", newShape.Perimeter())
+
+	newShape = Circle{radius: 4}
+	fmt.Println("Area of circle: ", newShape.Area())
+	fmt.Println("Perimeter of circle: ", newShape.Perimeter())
 }

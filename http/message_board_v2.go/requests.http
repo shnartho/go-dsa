@@ -1,0 +1,6 @@
+
+// test api endpoints 
+curl http://localhost:8800/messages
+curl -X POST -H "Content-Type: application/json" -d '{"message":"Third announcement"}' http://localhost:8800/messages
+curl -X PUT -H "Content-Type: application/json" -d '{"message":"First announcement Updated"}' http://localhost:8800/messages/0
+curl -X DELETE -H "Content-Type: application/json" http://localhost:8800/messages/1

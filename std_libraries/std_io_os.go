@@ -39,7 +39,7 @@ func main() {
 	fmt.Println("New Reader:", string(newBuf))
 
 	// writing to a multi-writer (stdout and file)
-	file, _ := os.Create("output.txt")
+	file, _ := os.Create("IO.txt")
 	defer file.Close()
 	multiWriter := io.MultiWriter(os.Stdout, file)
 	io.WriteString(multiWriter, "Hello to MultiWriter")

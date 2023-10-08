@@ -3,6 +3,8 @@
 
 package main
 
+import "fmt"
+
 func MaxSubArraySum(arr []int) int {
 	arrLen := len(arr)
 	currentSum := arr[0]
@@ -23,7 +25,7 @@ func max(x, y int) int {
 	}
 }
 
-// func main1(){
-// 	testArr := []int{3,2,4,5}
-// 	fmt.Println(maxSubArraySum(testArr))
-// }
+func main1() {
+	testArr := []int{3, 2, 4, 5}
+	fmt.Println(MaxSubArraySum(testArr))
+}
